@@ -4,7 +4,27 @@ What?
 A simple parallel MapReduce implementation in Erlang.
 The emphasis is on simplicity and understandability of the code.
 
-Check out the examples to see how the implementation is used.
+Check out the demo files for simple examples including
+  * building an inverted index of a collection of text documents
+	* word frequency count of a collection of text documents
+	* grep tool to search a collection of text documents
+
+To compile:
+
+		make code
+
+To run:
+
+		cd ebin
+		erl
+		% in the erl prompt:
+		> Index = demo_inverted_index:index(test). % index the test subdirectory
+		> demo_inverted_index:query_index(Index, rover).
+
+
+To clean up:
+
+		make clean
 
 Why?
 ====
